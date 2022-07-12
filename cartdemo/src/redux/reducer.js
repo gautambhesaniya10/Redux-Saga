@@ -9,15 +9,14 @@ export const cartData = (state = initialState, action) => {
     switch (action.type) {
         case ADD_TO_CART:
             return {
-                // ...state,
                 data: [...state.data, action.payload]
             }
         case REMOVE_FROM_CART:
             if (state.data.length > 0) {
-                state.data.length =  state.data.length - 1
+                // state.data.length =  state.data.length - 1
+                let result = state.data.filter(item => item.id !== action.payload)
                 return {
-                    // ...state,
-                    data: [...state.data]
+                    data: [...result]
                 }
             }
             return state;
@@ -25,7 +24,6 @@ export const cartData = (state = initialState, action) => {
             if (state.data.length > 0) {
                 state.data = []
                 return {
-                    // ...state,
                     data: [...state.data]
                 }
             }

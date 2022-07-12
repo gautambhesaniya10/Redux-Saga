@@ -8,10 +8,10 @@ export const addToCart = (data) => {
     }
 }
 
-export const removeFromCart = () => {
+export const removeFromCart = (id) => {
     return{
         type : REMOVE_FROM_CART,
-        // payload : data
+        payload : id
     }
 }
 

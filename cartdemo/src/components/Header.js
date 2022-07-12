@@ -1,16 +1,24 @@
-import React from 'react'
-import {useSelector} from 'react-redux'
+import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom';
+import logoImg from '../assets/images/hexa.png';
+
 const Header = () => {
-    const result = useSelector((state) => state.cartData.data)
-    console.log("da+++++++",result);
+  const result = useSelector((state) => state.cartData.data)
+
   return (
     <>
-    <div className='header'>
-    <div className='cart-div'>
-        <span>{result.length}</span>
-        <img src='https://img.icons8.com/ios-glyphs/344/clear-shopping-cart.png' alt=''/>
-    </div>
-    </div>
+      <div className='header'>
+        <Link to="/">
+          <img width={"30%"} src={logoImg} alt="" />
+        </Link>
+        <div className='cart-div'>
+          <Link to="/cart">
+            <span>{result.length}</span>
+            <img src='https://img.icons8.com/ios-glyphs/344/clear-shopping-cart.png' alt='' />
+          </Link>
+        </div>
+      </div>
     </>
   )
 }

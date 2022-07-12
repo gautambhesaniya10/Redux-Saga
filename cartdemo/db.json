@@ -1,0 +1,49 @@
+{
+    "product" : [
+            {
+                "id" : 1,
+                "name" : "Samsung A50",
+                "price" : 50000,
+                "color" : "Red",
+                "category" : "Mobile",
+                "brand" : "Samsung",
+                "photo" : "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a50-sm-a505f-ds-1.jpg"
+            },
+            {
+                "id" : 2,
+                "name" : "Samsung A30",
+                "price" : 3000,
+                "color" : "white",
+                "category" : "Mobile",
+                "brand" : "Samsung",
+                "photo" : "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a50-sm-a505f-ds-1.jpg"
+            },
+            {
+                "id" : 3,
+                "name" : "Samsung S10",
+                "price" : 65000,
+                "color" : "black",
+                "category" : "Mobile",
+                "brand" : "Samsung",
+                "photo" : "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a50-sm-a505f-ds-1.jpg"
+            },
+            {
+                "id" : 4,
+                "name" : "zen",
+                "price" : 150000,
+                "color" : "Green",
+                "category" : "car",
+                "brand" : "suzuki",
+                "photo" : "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a50-sm-a505f-ds-1.jpg"
+            },
+            {
+                "id" : 5,
+                "name" : "Splender",
+                "price" : 5000,
+                "color" : "Green",
+                "category" : "bike",
+                "brand" : "Honda",
+                "photo" : "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-a50-sm-a505f-ds-1.jpg"
+            }
+    ]
+}
