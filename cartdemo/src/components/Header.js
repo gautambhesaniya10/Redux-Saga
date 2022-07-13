@@ -3,15 +3,25 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 import logoImg from '../assets/images/hexa.png';
 
-const Header = () => {
+const Header = (props) => {
   const result = useSelector((state) => state.cartData.data)
+
+  console.log("resulttttt", result);
+
+  const changeHandler = (e) => {
+    props.dataValue(e.target.value)
+  }
 
   return (
     <>
       <div className='header'>
-        <Link to="/">
-          <img width={"30%"} src={logoImg} alt="" />
+        <Link style={{width : "7%"}} to="/">
+          <img width={"90%"} src={logoImg} alt="" />
         </Link>
+        {
+          props.cartProp ? null :  <input type="text" class="form-control searchInput"   placeholder="Search Hear....." name='inputText'  onChange={changeHandler} />
+        }
+       
         <div className='cart-div'>
           <Link to="/cart">
             <span>{result.length}</span>

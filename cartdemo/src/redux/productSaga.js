@@ -1,8 +1,8 @@
 import { takeEvery ,put } from 'redux-saga/effects'
 import { PRODUCT_LIST, SEARCH_PRODUCT, SET_PRODUCT_LIST } from './constant';
 
-function* getProducts() {
-    let data = yield fetch('http://localhost:3004/product');
+function* getProducts(dataLimit) {
+    let data = yield fetch(`http://localhost:3004/product?_limit=${dataLimit.limit}`);
     data = yield data.json();
     yield put({type : SET_PRODUCT_LIST , data : data})
     

@@ -4,9 +4,10 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: orange;
   /* height: 100px; */
+  align-items: center;
 }
 
 .cart-div {
@@ -33,7 +34,8 @@
 
 .product-container {
   display: flex;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .product-list {
@@ -42,23 +44,32 @@
   padding: 30px;
 }
 
-.cart-page-container{
+.cart-page-container {
   display: flex;
   justify-content: center;
 }
-table , th, td {
-  border:1px solid #ccc;
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
   padding: 25px;
   border-collapse: collapse;
 }
-.price-detail{
+
+.price-detail {
   margin-top: 10%;
 }
 
-.price-detail .adjust-price{
+.price-detail .adjust-price {
   display: flex;
   justify-content: space-around;
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
+}
+
+.searchInput {
+  width: 20%;
+  /* margin: 34px 50px 34px 34px; */
 }
