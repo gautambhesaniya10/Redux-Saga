@@ -1,4 +1,4 @@
-import { PRODUCT_LIST, SEARCH_PRODUCT } from "./constant";
+import { PRODUCT_LIST, SEARCH_PRODUCT } from "../constant";
 
 
 export const productList = (limit) => {

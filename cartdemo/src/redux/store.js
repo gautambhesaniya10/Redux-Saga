@@ -1,5 +1,5 @@
 import { applyMiddleware, createStore } from "redux";
-import rootReducer from "./rootReducer";
+import rootReducer from "./reducer/rootReducer";
 import { composeWithDevTools } from "redux-devtools-extension";
 import productSaga from "./productSaga";
 // import { configureStore } from "@reduxjs/toolkit";

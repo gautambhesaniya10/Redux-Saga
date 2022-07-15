@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, emptyCart, removeFromCart } from '../redux/action';
-import { productList, searchProduct } from '../redux/productAction';
+import { addToCart, emptyCart, removeFromCart } from '../redux/action/action';
+import { productList, searchProduct } from '../redux/action/productAction';
 import Header from './Header';
 
 function Main() {

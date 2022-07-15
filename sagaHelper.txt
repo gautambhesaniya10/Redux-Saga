@@ -1,0 +1,20 @@
+SAGA HELPERS : 
+
+- takeEvery
+- takeLatest
+- call
+- put
+- take
+
+
+- takeEvery : takes every matching action.
+
+- takeLatest : takes every matching action but cancel any previous saga task if it is still running.
+
+- call : runs a function , if it returns a promise ,pauses the saga untill the promise is resolved.
+
+- put : dispatches an action.
+
+- fork : non-blocking call on function , fork, like call.
+
+- take - If take is called with no arguments or '*' all dispatched actions are matched (e.g. take() will match all actions)
