@@ -10,15 +10,16 @@ const initialState = {
   name: "",
   email: "",
   phone: "",
-  address: ""
+  address: "",
+  password : ""
 }
 
 
 const AddEditUser = () => {
 
   const [formValue, setFormValue] = useState(initialState);
+  const { name, email, phone, address , password } = formValue;
   const [editMode, setEditMode] = useState(false);
-  const { name, email, phone, address } = formValue;
   const history = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -46,9 +47,12 @@ const AddEditUser = () => {
         } 
         else {
             dispatch(editUserStart({ id, formValue }));
-            setEditMode(false);
             toast.success("User Updated Successfully")
-            setTimeout(() => history("/"), 500)
+            // setTimeout(() => history("/"), 500)
+            setTimeout(() => {
+              history("/")
+              setEditMode(false)
+            }, 500);
         }
 
     }
@@ -61,7 +65,7 @@ const AddEditUser = () => {
 
   return (
     <MDBValidation className="row g-0" style={{ marginTop: "30px" }} noValidate onSubmit={handleSubmit}>
-      <p className="fs-2 fw bold">{!editMode ? "Add User Details" : "Update User details"}</p>
+      <p className="fs-2 fw bold">{!editMode ? "Sign up" : "Update User details"}</p>
       <div style={{ margin: "auto", padding: "15px", maxWidth: "400px", alignContent: "center" }}>
         <MDBValidationItem feedback='Please Enter Your Name !' invalid>
           <MDBInput value={name || ""} name="name" type="text" onChange={onInputChange} label="Name" required /><br />
@@ -79,8 +83,12 @@ const AddEditUser = () => {
           <MDBInput value={address || ""} name="address" type="text" onChange={onInputChange} required label="Address"  /><br />
         </MDBValidationItem>
 
+        <MDBValidationItem feedback='Please Enter Your Password !' invalid>
+          <MDBInput value={password || ""} name="password" type="password" onChange={onInputChange} required label="Password"  /><br />
+        </MDBValidationItem>
+
         <div className="col-12">
-          <MDBBtn style={{ marginRight: "10px" }} type="submit">{!editMode ? "Add" : "Update"}</MDBBtn>
+          <MDBBtn style={{ marginRight: "10px" }} type="submit">{!editMode ? "Sign Up" : "Update"}</MDBBtn>
           <MDBBtn onClick={() => history("/")} color="danger">Back</MDBBtn>
         </div>
       </div>

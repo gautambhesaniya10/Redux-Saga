@@ -29,12 +29,18 @@ const Header = () => {
                             </MDBNavbarItem>
                             <MDBNavbarItem>
                                 <MDBNavbarLink className="nav-link">
-                                    <NavLink to="/adduser" className="text-white">AddUser</NavLink>
+                                    <NavLink to="/adduser" className="text-white">Sign Up</NavLink>
                                 </MDBNavbarLink>
                             </MDBNavbarItem>
                             <MDBNavbarItem>
                                 <MDBNavbarLink className="nav-link">
-                                    <NavLink to="/about" className="text-white">About</NavLink>                                </MDBNavbarLink>
+                                    <NavLink to="/about" className="text-white">About</NavLink>
+                                </MDBNavbarLink>
+                            </MDBNavbarItem>
+                            <MDBNavbarItem>
+                                <MDBNavbarLink className="nav-link">
+                                    <NavLink to="/login" className="text-white">Login</NavLink>
+                                </MDBNavbarLink>
                             </MDBNavbarItem>
                         </MDBNavbarNav>
                     </MDBCollapse>

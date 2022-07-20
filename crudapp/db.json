@@ -1,19 +1,20 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "gb",
-      "email": "gb@gmail.com",
-      "phone": "9429917508",
+      "name": "mg",
+      "email": "mg@gmail.com",
+      "phone": "12334345",
+      "address": "Surat",
       "password": "123",
-      "address": "Amreli"
+      "id": 4
     },
     {
       "name": "Gautam Bhesaniya",
-      "email": "gcb@gmail.com",
-      "phone": "34432",
-      "address": "Surat",
-      "id": 3
+      "email": "gb@gmail.com",
+      "phone": "9429914508",
+      "address": "Amreli",
+      "password": "123",
+      "id": 5
     }
   ]
 }

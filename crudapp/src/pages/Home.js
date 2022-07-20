@@ -10,7 +10,6 @@ const Home = () => {
 
   const dispatch = useDispatch();
   const { users ,loading } = useSelector(state => state.data)
-  console.log("getdata", users);
 
   useEffect(() => {
     dispatch(loadUsersStart())
@@ -63,11 +62,11 @@ if (loading) {
                     <MDBIcon fas icon="pen" style={{ color: "#55acee", size: "lg", marginBottom: "10px" }} />
                   </MDBTooltip>
                 </Link>{"  "}
-                <Link to={`/userInfo/${item.id}`}>
+                {/* <Link to={`/userInfo/${item.id}`}>
                   <MDBTooltip title="View" tag="a">
                     <MDBIcon fas icon="eye" style={{ color: "#3b5998", size: "lg", marginBottom: "10px" }} />
                   </MDBTooltip>
-                </Link>
+                </Link> */}
               </td>
             </tr>
           </MDBTableBody>
